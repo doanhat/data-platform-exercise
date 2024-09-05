@@ -10,7 +10,7 @@
     {
       "name": "date",
       "label": "Billing date",
-      "helpText": "The date launching the billng process"
+      "helpText": "The date launching the billing process"
     }
   ]
 }
