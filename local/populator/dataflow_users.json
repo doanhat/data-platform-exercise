@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Alice",
+        "subscription_type": "Basic",
+        "total_cards_ordered": 2
+    },
+    {
+        "name": "Bob",
+        "subscription_type": "Plus",
+        "total_cards_ordered": 7
+    },
+    {
+        "name": "Charlie",
+        "subscription_type": "Pro",
+        "total_cards_ordered": 15
+    }
+]

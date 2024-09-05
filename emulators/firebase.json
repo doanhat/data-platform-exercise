@@ -1,0 +1,15 @@
+{
+  "emulators": {
+    "firestore": {
+      "port": 8081
+    },
+    "pubsub": {
+      "port": 8082
+    },
+    "ui": {
+      "enabled": true,
+      "port": 8083
+    },
+    "singleProjectMode": true
+  }
+}

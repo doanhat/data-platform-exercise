@@ -1,0 +1,79 @@
+[
+  {
+    "transaction_id": "1",
+    "user_id": "1",
+    "type": "bank_transfer",
+    "amount": 1063,
+    "date": "2024-09-01T00:54:50.508787Z"
+  },
+  {
+    "transaction_id": "2",
+    "user_id": "2",
+    "type": "check_deposit",
+    "amount": 8874,
+    "date": "2024-09-01T00:54:50.508868Z"
+  },
+  {
+    "transaction_id": "3",
+    "user_id": "3",
+    "type": "international_card_payment",
+    "amount": 1821,
+    "date": "2024-09-01T00:54:50.508877Z"
+  },
+  {
+    "transaction_id": "4",
+    "user_id": "4",
+    "type": "card_order",
+    "amount": 1,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "5",
+    "user_id": "5",
+    "type": "bank_transfer",
+    "amount": 6963,
+    "date": "2024-09-01T00:54:50.508893Z"
+  },
+  {
+    "transaction_id": "6",
+    "user_id": "2",
+    "type": "bank_transfer",
+    "amount": 4805,
+    "date": "2024-09-01T00:54:50.508900Z"
+  },
+  {
+    "transaction_id": "7",
+    "user_id": "5",
+    "type": "bank_transfer",
+    "amount": 6754,
+    "date": "2024-09-01T00:54:50.508907Z"
+  },
+  {
+    "transaction_id": "8",
+    "user_id": "3",
+    "type": "international_card_payment",
+    "amount": 4132,
+    "date": "2024-09-01T00:54:50.508914Z"
+  },
+  {
+    "transaction_id": "9",
+    "user_id": "5",
+    "type": "check_deposit",
+    "amount": 2924,
+    "date": "2024-09-01T00:54:50.508921Z"
+  },
+  {
+    "transaction_id": "10",
+    "user_id": "1",
+    "type": "bank_transfer",
+    "amount": 1020,
+    "date": "2024-09-01T00:54:50.508928Z"
+  },
+  {
+    "transaction_id": "11",
+    "user_id": "1",
+    "type": "card_order",
+    "amount": 1,
+    "date": "2024-09-01T00:54:50.508945Z"
+  }
+]

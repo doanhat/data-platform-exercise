@@ -1,0 +1,23 @@
+[
+  {
+    "transaction_id": "3",
+    "user_id": "2",
+    "type": "international_card_payment",
+    "amount": 1821,
+    "date": "2024-09-01T00:54:50.508877Z"
+  },
+  {
+    "transaction_id": "4",
+    "user_id": "2",
+    "type": "bank_transfer",
+    "amount": 1,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "5",
+    "user_id": "2",
+    "type": "check_deposit",
+    "amount": 2924,
+    "date": "2024-09-01T00:54:50.508921Z"
+  }
+]

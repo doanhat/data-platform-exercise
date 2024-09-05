@@ -1,0 +1,105 @@
+main:
+  params: [ input ]
+  steps:
+    - init:
+        assign:
+          - project: $${sys.get_env("GOOGLE_CLOUD_PROJECT_ID")}
+          - region: ${location} # terraform
+          - executionDate: $${default(map.get(input, "date"), text.substring(time.format(sys.now()), 0, 10))}
+
+    - cardOrderTransactionFeeCalculation:
+        call: LaunchCloudRun
+        args:
+          project: $${project}
+          region: $${region}
+          executionDate: $${executionDate}
+        result: firstJobId
+    - monthlyBillingGeneration:
+        call: LaunchDataflow
+        args:
+          project: $${project}
+          region: $${region}
+          executionDate: $${executionDate}
+        result: secondJobId
+    - waitMonthlyBillingGeneration:
+        call: DataflowWaitUntilStatus
+        args:
+          project: $${project}
+          region: $${region}
+          jobId: $${secondJobId}
+          status: "JOB_STATE_DONE"
+    - returnResult:
+        return: $${"Cloud Run and Dataflow jobs executed successfully for " + executionDate}
+
+LaunchCloudRun:
+  params: [ project, region, executionDate ]
+  steps:
+    - launch:
+        call: http.get
+        args:
+          url: $${"${invoke_url}/monthly_fees?date="+executionDate} # invoke_url : terraform
+          auth:
+            type: OIDC
+            audience: $${"${invoke_url}/monthly_fees?date="+executionDate} # invoke_url : terraform
+
+LaunchDataflow:
+  params: [ project, region, executionDate ]
+  steps:
+    - launch:
+        call: http.post
+        args:
+          url: $${"https://dataflow.googleapis.com/v1b3/projects/"+project+"/locations/"+region+"/flexTemplates:launch"}
+          auth:
+            type: OAuth2
+          body:
+            launchParameter:
+              containerSpecGcsPath: "gs://${bucket_name}/templates/metadata.json" # terraform
+              jobName: $${"${dataflow_job_name}-"+executionDate} # terraform
+              parameters:
+                bucket: "${bucket_name}"
+                date: $${executionDate}
+        result: dataflowResponse
+        next: jobCreated
+    - jobCreated:
+        return: $${dataflowResponse.body.job.id}
+
+DataflowWaitUntilStatus:
+  params: [ project, region, jobId, status ]
+  steps:
+    - init:
+        assign:
+          - currentStatus: ""
+          - failureStatuses: [ "JOB_STATE_FAILED", "JOB_STATE_CANCELLED", "JOB_STATE_UPDATED", "JOB_STATE_DRAINED" ]
+    - check_condition:
+        switch:
+          - condition: $${currentStatus in failureStatuses}
+            next: exit_fail
+          - condition: $${currentStatus != status}
+            next: iterate
+        next: exit_success
+    - iterate:
+        steps:
+          - sleep30s:
+              call: sys.sleep
+              args:
+                seconds: 30
+          - getJob:
+              call: http.get
+              args:
+                url: $${"https://dataflow.googleapis.com/v1b3/projects/"+project+"/locations/"+region+"/jobs/"+jobId}
+                auth:
+                  type: OAuth2
+              result: getJobResponse
+          - getStatus:
+              assign:
+                - currentStatus: $${getJobResponse.body.currentState}
+          - log:
+              call: sys.log
+              args:
+                text: $${"Current job status="+currentStatus}
+                severity: "INFO"
+        next: check_condition
+    - exit_success:
+        return: $${currentStatus}
+    - exit_fail:
+        raise: $${"Job in unexpected terminal status "+currentStatus}

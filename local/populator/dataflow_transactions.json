@@ -1,0 +1,191 @@
+[
+  {
+    "transaction_id": "1",
+    "user_id": "1",
+    "type": "bank_transfer",
+    "amount": 1063,
+    "status": "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508787Z"
+  },
+  {
+    "transaction_id": "2",
+    "user_id": "1",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 5,
+    "date": "2024-09-01T00:54:50.508787Z"
+  },
+  {
+    "transaction_id": "3",
+    "user_id": "2",
+    "type": "check_deposit",
+    "amount": 1821,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508877Z"
+  },
+  {
+    "transaction_id": "4",
+    "user_id": "2",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "5",
+    "user_id": "2",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "6",
+    "user_id": "2",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "7",
+    "user_id": "2",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "8",
+    "user_id": "2",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "9",
+    "user_id": "2",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 5,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "10",
+    "user_id": "3",
+    "type": "international_card_payment",
+    "amount": 6963,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508893Z"
+  },
+  {
+    "transaction_id": "11",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "12",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "13",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "14",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "15",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "16",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "17",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "18",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "19",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "20",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 0,
+    "date": "2024-09-01T00:54:50.508886Z"
+  },
+  {
+    "transaction_id": "21",
+    "user_id": "3",
+    "type": "card_order",
+    "amount": 1,
+    "status":  "completed",
+    "fee": 5,
+    "date": "2024-09-01T00:54:50.508886Z"
+  }
+]

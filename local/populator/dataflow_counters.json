@@ -1,0 +1,14 @@
+[
+  {
+    "total_bank_transfer_count": 1,
+    "total_card_order_count": 1
+  },
+  {
+    "total_check_deposit_count": 1,
+    "total_card_order_count": 6
+  },
+  {
+    "total_international_card_payment_count": 1,
+    "total_card_order_count": 11
+  }
+]
