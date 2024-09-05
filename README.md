@@ -16,7 +16,8 @@
 - Code testability
 
 ## Architecture
-![billing.png](billing.png)
+
+![billing.drawio.png](billing.drawio.png)
 
 ## Project structure
 - root: dependencies management, deployment and test scripts
