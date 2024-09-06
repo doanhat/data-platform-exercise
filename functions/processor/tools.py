@@ -14,7 +14,6 @@ from constants import TransactionType, SubscriptionType
 def add_transaction(
     firebase_transaction: Transaction,
     transaction_ref: DocumentReference,
-    user_ref: DocumentReference,
     data: dict,
 ) -> bool:
     transaction_snapshot = transaction_ref.get(transaction=firebase_transaction)
@@ -30,10 +29,6 @@ def add_transaction(
         "status": "in-progress" if data["type"] != "card_order" else "pending",
     }
     firebase_transaction.set(transaction_ref, data_structure)
-    if data["type"] == "card_order":
-        firebase_transaction.update(
-            user_ref, {"total_cards_ordered": firestore.Increment(1)}
-        )
     return True
 
 

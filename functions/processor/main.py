@@ -20,7 +20,6 @@ from tools import (
 def preprocess(event: CloudEvent):
     data = extract_data(event)
     transaction_ref = db.collection("transactions").document(data["transaction_id"])
-    user_ref = db.collection("users").document(data["user_id"])
 
     if is_old(event):
         add_failed_transaction(fb_transaction, transaction_ref, data)
@@ -28,7 +27,7 @@ def preprocess(event: CloudEvent):
         logging.info("Transaction processing failed, move to DLQ.")
         return 201
 
-    response = add_transaction(fb_transaction, transaction_ref, user_ref, data)
+    response = add_transaction(fb_transaction, transaction_ref, data)
     if not response:
         logging.info("Transaction already exists.")
         return 201

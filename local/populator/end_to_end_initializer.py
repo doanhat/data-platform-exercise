@@ -18,24 +18,26 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
-def init_users(path="users.json"):
+def init_users(path="users.json", num_exec=0):
     with open(path, "r") as file:
         users = json.load(file)
 
-    for i, user in enumerate(users):
-        doc_ref = db.collection("users").document(str(i + 1))
-        doc_ref.set(user)
+    if num_exec == 0:
+        for i, user in enumerate(users):
+            doc_ref = db.collection("users").document(str(i + 1))
+            doc_ref.set(user)
 
     print("Users added to Firestore successfully.")
     return users
 
 
-def init_transactions(users):
+def init_transactions(users, last_transaction):
+    last_id = last_transaction["id"]
+    num_exec = last_transaction["num_exec"]
     user_ids = list(range(1, len(users) + 1))  # User IDs from 1 to len(users)
     user_counter = {}
     for i, user in enumerate(users):
         user_counter[str(i + 1)] = user
-    # Create a list of transactions ensuring every user gets at least one transaction
 
     transaction_types = [
         "international_card_payment",
@@ -60,7 +62,7 @@ def init_transactions(users):
             "date": transaction_date
         }
 
-    for i in range(100000):
+    for i in range(last_transaction["id"], last_transaction["id"] + 100):
         need_another = True
         tx = {}
         while need_another:
@@ -87,12 +89,17 @@ def init_transactions(users):
                     user_counter[tx["user_id"]]["total_cards_ordered"] = user_counter[tx["user_id"]]["total_cards_ordered"] + 1
             else:
                 need_another = False
-
+        last_id = i
         future = publisher.publish(topic_path, json.dumps(tx).encode("utf-8"))
         print(f"Published message ID: {future.result()}")
+    num_exec = num_exec + 1
+    with open("last_transaction_id.json", "w") as outfile:
+        json.dump({"num_exec": num_exec, "id": last_id}, outfile)
 
 
 if __name__ == "__main__":
-    users = init_users()
-    init_transactions(users)
+    with open("last_transaction_id.json", "r") as file:
+        last_transaction = json.load(file)
+    users = init_users(num_exec=int(last_transaction["num_exec"]))
+    init_transactions(users,last_transaction=last_transaction)
     print("ok")

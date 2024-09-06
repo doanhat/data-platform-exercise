@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0b375286-6be4-4eec-b3a0-cf3cb472ecce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_run_service/main/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_run_service/main/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud_run_service/main/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_run_service/main/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_run_service/main/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_run_service/main/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_run_service/main/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_run_service/main/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/processor/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/processor/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/processor/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/processor/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/populator/end_to_end_initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/local/populator/end_to_end_initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/flow/cloud_run.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/flow/cloud_run.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_units_transaction_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_units_transaction_operations.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +98,7 @@
       <recent name="$PROJECT_DIR$/app/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_units_transaction_operations.py">
+  <component name="RunManager" selected="Python.end_to_end_initializer">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="shine-assignment" />
       <option name="ENV_FILES" value="" />
@@ -235,8 +243,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.end_to_end_initializer" />
-        <item itemvalue="Python tests.Python tests in test_integration_dataflow.py" />
         <item itemvalue="Python.app" />
+        <item itemvalue="Python tests.Python tests in test_integration_dataflow.py" />
         <item itemvalue="Python tests.Python tests in test_units_card_order_fee_calculator.py" />
         <item itemvalue="Python tests.Python tests in test_units_transaction_operations.py" />
       </list>
@@ -285,23 +293,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/functions/processor/tools.py</url>
-          <line>87</line>
+          <line>91</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/functions/processor/main.py</url>
-          <line>63</line>
+          <line>62</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/functions/processor/tools.py</url>
-          <line>154</line>
+          <line>158</line>
           <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/cloud_run_service/main/app.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cloud_run_service/main/tools.py</url>
@@ -310,7 +313,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_units_transaction_operations.py</url>
-          <line>78</line>
+          <line>74</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -340,13 +343,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/local/populator/end_to_end_initializer.py</url>
-          <line>75</line>
+          <line>77</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/local/populator/end_to_end_initializer.py</url>
-          <line>68</line>
+          <line>70</line>
           <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/local/populator/end_to_end_initializer.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/local/populator/end_to_end_initializer.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/cloud_run_service/main/app.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

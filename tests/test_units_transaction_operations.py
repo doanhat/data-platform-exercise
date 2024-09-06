@@ -28,7 +28,7 @@ def setup_and_teardown():
 
 @pytest.mark.order(1)
 @pytest.mark.parametrize(
-    "data, expected_transaction, expected_cards_ordered, expected_transaction_status",
+    "data, expected_transaction, expected_transaction_status",
     [
         (
             {
@@ -39,7 +39,6 @@ def setup_and_teardown():
                 "date": "2024-09-01T00:54:50.508787Z",
             },
             True,
-            2,
             "in-progress",
         ),
         (
@@ -51,7 +50,6 @@ def setup_and_teardown():
                 "date": "2024-09-01T00:54:50.508787Z",
             },
             False,  # transaction already existed,
-            2,
             "in-progress",
         ),
         (
@@ -63,27 +61,23 @@ def setup_and_teardown():
                 "date": "2024-09-01T00:54:50.508787Z",
             },
             True,
-            3,
             "pending",
         ),
     ],
 )
 def test_add_transaction(
-    data, expected_transaction, expected_cards_ordered, expected_transaction_status
+    data, expected_transaction, expected_transaction_status
 ):
     mock_transaction = db.transaction()
     mock_transaction_ref = db.collection("transactions").document(
         data["transaction_id"]
     )
-    mock_user_ref = db.collection("users").document(data["user_id"])
     result = add_transaction(
-        mock_transaction, mock_transaction_ref, mock_user_ref, data
+        mock_transaction, mock_transaction_ref, data
     )
 
-    mock_cards_ordered = mock_user_ref.get().get("total_cards_ordered")
     mock_transaction_status = mock_transaction_ref.get().get("status")
     assert result == expected_transaction
-    assert mock_cards_ordered == expected_cards_ordered
     assert mock_transaction_status == expected_transaction_status
 
 

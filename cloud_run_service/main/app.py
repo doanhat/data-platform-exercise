@@ -15,9 +15,7 @@ from tools import calculate_card_order_fee, call_fee_service
 app = Flask(__name__)
 
 
-@firestore.transactional
 def process_card_order_transaction(
-    firebase_transaction: Transaction,
     processor: Processor,
     transaction: DocumentSnapshot,
 ):
@@ -30,30 +28,24 @@ def process_card_order_transaction(
         user_id,
         True,
         {counter_type: 0},
-        firebase_transaction,
     )
-    current_cards_ordered = user.get("total_cards_ordered")
+    current_cards_ordered = user.to_dict().get("total_cards_ordered", 0)
     fee, calculable = calculate_card_order_fee(subscription_type, current_cards_ordered)
 
     logger.info(f"Transaction - {transaction.id} - User - {user_id} - Fee - {str(fee)}")
     if calculable:
         response = call_fee_service(fee, user)
         if not response:
-            firebase_transaction.update(
-                user.reference, {"total_cards_ordered": firestore.Increment(-1)}
-            )
             calculable = False
         if counter_type in counter.to_dict():
-            firebase_transaction.update(
-                counter.reference, {counter_type: firestore.Increment(1)}
-            )
+            counter.reference.update({counter_type: firestore.Increment(1)})
         else:
-            if len(counter.to_dict()):
-                firebase_transaction.update(counter.reference, {counter_type: 1})
+            if len(counter.to_dict()) > 0:
+                counter.reference.update({counter_type: 1})
             else:
-                firebase_transaction.set(counter.reference, {counter_type: 1})
-    firebase_transaction.update(
-        transaction.reference,
+                counter.reference.set({counter_type: 1})
+        user.reference.update({"total_cards_ordered": firestore.Increment(1)})
+    transaction.reference.update(
         {
             "status": (
                 TransactionStatus.COMPLETED.value
@@ -82,13 +74,12 @@ def process_monthly_fees():
         start_date = end_date - relativedelta(months=1)
 
         fs = FirestoreClient()
-        fb_transaction = fs.db.transaction()
         processor = Processor(fs, start_date, end_date)
         card_order_transactions = processor.get_card_order_transactions()
 
         for transaction in card_order_transactions:
             try:
-                process_card_order_transaction(fb_transaction, processor, transaction)
+                process_card_order_transaction(processor, transaction)
             except ProcessorError as e:
                 # Log the error but continue processing other transactions
                 logger.error(f"Error processing transaction {transaction}: {str(e)}")
