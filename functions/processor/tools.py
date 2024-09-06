@@ -38,7 +38,12 @@ def add_transaction(
 
 
 @firestore.transactional
-def update_transaction(firebase_transaction, transaction_ref, user_ref, counter_ref):
+def update_transaction(
+    firebase_transaction: Transaction,
+    transaction_ref: DocumentReference,
+    user_ref: DocumentReference,
+    counter_ref: DocumentReference,
+):
     transaction_snapshot = get_firestore_snapshot(transaction_ref, firebase_transaction)
     user_snapshot = get_firestore_snapshot(user_ref, firebase_transaction)
     counter_snapshot = get_firestore_snapshot(counter_ref, firebase_transaction)
@@ -72,7 +77,9 @@ def check_monthly_counter_existence(
 
 
 @firestore.transactional
-def update_failed_transaction(firebase_transaction, transaction_ref):
+def update_failed_transaction(
+    firebase_transaction: Transaction, transaction_ref: DocumentReference
+):
     transaction_snapshot = transaction_ref.get(transaction=firebase_transaction)
     if not transaction_snapshot.exists:
         raise Exception("Transaction does not exist.")
@@ -81,7 +88,9 @@ def update_failed_transaction(firebase_transaction, transaction_ref):
 
 
 @firestore.transactional
-def add_failed_transaction(firebase_transaction, transaction_ref, data):
+def add_failed_transaction(
+    firebase_transaction: Transaction, transaction_ref: DocumentReference, data: dict
+):
     transaction_snapshot = transaction_ref.get(transaction=firebase_transaction)
     if transaction_snapshot.exists:
         return False
@@ -128,7 +137,7 @@ def calculate_fee(
     return fee
 
 
-def call_fee_service(amount, user):
+def call_fee_service(amount, user) -> bool:
     print(amount, user)
     return True
 
@@ -137,18 +146,18 @@ def extract_data(event: CloudEvent):
     return json.loads(base64.b64decode(event.data["message"]["data"]).decode())
 
 
-def is_old(event: CloudEvent):
+def is_old(event: CloudEvent) -> bool:
     return (
         datetime.now(timezone.utc)
         - datetime.fromisoformat(event["time"].replace("Z", "+00:00"))
     ).total_seconds() > EVENT_MAX_AGE
 
 
-def check_status(transaction_ref, status):
+def check_status(transaction_ref, status) -> bool:
     return transaction_ref.get().get("status") == status
 
 
-def get_date_from_str(event: CloudEvent):
+def get_date_from_str(event: CloudEvent) -> str:
     date = datetime.fromisoformat(event["time"].replace("Z", "+00:00"))
     return date.strftime("%Y_%m")
 

@@ -37,7 +37,12 @@ def process_card_order_transaction(
 
     logger.info(f"Transaction - {transaction.id} - User - {user_id} - Fee - {str(fee)}")
     if calculable:
-        call_fee_service(fee, user)
+        response = call_fee_service(fee, user)
+        if not response:
+            firebase_transaction.update(
+                user.reference, {"total_cards_ordered": firestore.Increment(-1)}
+            )
+            calculable = False
         if counter_type in counter.to_dict():
             firebase_transaction.update(
                 counter.reference, {counter_type: firestore.Increment(1)}

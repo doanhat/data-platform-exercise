@@ -23,6 +23,6 @@ def calculate_card_order_fee(
     return None, False
 
 
-def call_fee_service(amount, user):
+def call_fee_service(amount, user) -> bool:
     print(amount, user)
     return True
