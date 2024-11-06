@@ -1,0 +1,492 @@
+[debug] [2024-09-06T01:33:32.432Z] ----------------------------------------------------------------------
+[debug] [2024-09-06T01:33:32.433Z] Command:       /Users/minhdoan/.nvm/versions/node/v18.20.4/bin/node /Users/minhdoan/.nvm/versions/node/v18.20.4/bin/firebase emulators:start
+[debug] [2024-09-06T01:33:32.433Z] CLI Version:   13.16.0
+[debug] [2024-09-06T01:33:32.433Z] Platform:      darwin
+[debug] [2024-09-06T01:33:32.433Z] Node Version:  v18.20.4
+[debug] [2024-09-06T01:33:32.434Z] Time:          Fri Sep 06 2024 03:33:32 GMT+0200 (Central European Summer Time)
+[debug] [2024-09-06T01:33:32.434Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-06T01:33:32.462Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-06T01:33:32.655Z] openjdk version "11.0.24" 2024-07-16
+[debug] [2024-09-06T01:33:32.656Z] 
+OpenJDK Runtime Environment Homebrew (build 11.0.24+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.24+0, mixed mode)
+
+[debug] [2024-09-06T01:33:32.658Z] Parsed Java major version: 11
+[info] i  emulators: Starting emulators: firestore, pubsub {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: firestore, pubsub"}}
+[debug] [2024-09-06T01:33:32.965Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-06T01:33:32.966Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-06T01:33:32.966Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-06T01:33:32.966Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-06T01:33:32.966Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":8083},{"address":"::1","family":"IPv6","port":8083}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8081}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8082}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-09-06T01:33:32.968Z] [hub] writing locator at /var/folders/2b/21ksnf5j7zs9gcg65fz50x9h0000gn/T/hub-shine-assignment.json
+[warn] ⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] ⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] ⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2024-09-06T01:33:32.970Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-09-06T01:33:32.970Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-09-06T01:33:32.970Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/minhdoan/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8081,"--websocket_port",9150,"--project_id","shine-assignment","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/minhdoan/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8081,\"--websocket_port\",9150,\"--project_id\",\"shine-assignment\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2024-09-06T01:33:33.546Z] Sep 06, 2024 3:33:33 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 06, 2024 3:33:33 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2024-09-06T01:33:33.556Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-09-06T01:33:33.556Z] 127.0.0.1:8081
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8081
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8081
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8081\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8081\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8081\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-09-06T01:33:33.577Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-09-06T01:33:33.577Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-09-06T01:33:33.577Z] Starting Pub/Sub Emulator with command {"binary":"/Users/minhdoan/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=127.0.0.1","--port=8082"],"optionalArgs":["port","host"],"joinArgs":true,"shell":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/Users/minhdoan/.cache/firebase/emulators/pubsub-emulator-0.8.14/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=127.0.0.1\",\"--port=8082\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true,\"shell\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2024-09-06T01:33:33.685Z] This is the Google Pub/Sub fake.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\n"}}
+[debug] [2024-09-06T01:33:33.685Z] Implementation may be incomplete or differ from the real system.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Implementation may be incomplete or differ from the real system.\n"}}
+[debug] [2024-09-06T01:33:33.711Z] Sep 06, 2024 3:33:33 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Sep 06, 2024 3:33:33 AM com.google.cloud.pubsub.testing.v1.Main main\nINFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2024-09-06T01:33:33.788Z] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"SLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\n"}}
+[debug] [2024-09-06T01:33:33.788Z] SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"SLF4J: Defaulting to no-operation (NOP) logger implementation\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n"}}
+[debug] [2024-09-06T01:33:33.984Z] Sep 06, 2024 3:33:33 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8082
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Sep 06, 2024 3:33:33 AM com.google.cloud.pubsub.testing.v1.Main main\nINFO: Server started, listening on 8082\n"}}
+[debug] [2024-09-06T01:33:34.186Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-09-06T01:33:34.186Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-09-06T01:33:34.186Z] Starting Emulator UI with command {"binary":"node","args":["/Users/minhdoan/.cache/firebase/emulators/ui-v1.13.0/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/minhdoan/.cache/firebase/emulators/ui-v1.13.0/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-09-06T01:33:34.270Z] Web / API server started at 127.0.0.1:8083
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:8083\n"}}
+[debug] [2024-09-06T01:33:34.270Z] Web / API server started at ::1:8083
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:8083\n"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:8083/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Firestore │ 127.0.0.1:8081 │ http://127.0.0.1:8083/firestore │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Pub/Sub   │ 127.0.0.1:8082 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-09-06T01:33:58.577Z] Sep 06, 2024 3:33:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Sep 06, 2024 3:33:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-09-06T01:33:58.655Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.883Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.886Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.888Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.891Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.893Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.899Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.905Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.908Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.908Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.912Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.914Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.914Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.915Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.915Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.917Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.917Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.919Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.919Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.920Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.920Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.921Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.921Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.923Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.926Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.928Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.928Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.929Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.929Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.931Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.931Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.932Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.932Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.933Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.934Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.937Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.938Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.940Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.941Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.943Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.944Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.945Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.948Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.958Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.959Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.960Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.960Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.961Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.961Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.962Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.962Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.964Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:58.964Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:58.966Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.967Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.969Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.970Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.971Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.972Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.974Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.976Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.977Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.978Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.979Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.981Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.982Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.983Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.985Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.986Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.987Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.988Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.989Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.991Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.992Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.993Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.994Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.996Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.997Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.998Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:58.999Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.001Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.002Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.003Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.004Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.005Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.006Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.007Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.008Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.017Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.039Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.044Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.046Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:59.046Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-06T01:33:59.048Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
+[debug] [2024-09-06T01:33:59.050Z] Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config. {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID test-project, but the emulator is configured for shine-assignment. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config."}}
+[debug] [2024-09-06T01:33:59.050Z] 
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\n"}}
+[debug] [2024-09-09T17:32:25.017Z] Received signal SIGHUP 1
+[info]  
+[info] i  emulators: Received SIGHUP for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGHUP signal again to stop right now. 
+[debug] [2024-09-09T17:32:25.087Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.094Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.095Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.097Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.098Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.099Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.100Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.101Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.102Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.103Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.104Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.105Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.111Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.115Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.116Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.116Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-09-09T17:32:25.117Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/minhdoan/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)

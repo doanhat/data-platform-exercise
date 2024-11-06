@@ -1,0 +1,17 @@
+.terraform
+.terraform.lock.hcl
+terraform.tfstate*
+
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache
+
+.cloudstorage/
+.venv/
+.DS_Store
+.idea/
+.idea
+.history
+*last_transaction_id.json

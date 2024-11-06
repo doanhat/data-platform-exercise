@@ -1,0 +1,16 @@
+{
+  "name": "Monthly billing flow flex template",
+  "description": "Generate monthly billing",
+  "parameters": [
+    {
+      "name": "bucket",
+      "label": "Output Bucket",
+      "helpText": "The bucket for writing output files"
+    },
+    {
+      "name": "date",
+      "label": "Billing date",
+      "helpText": "The date launching the billing process"
+    }
+  ]
+}
