@@ -1,4 +1,4 @@
-# Data Platform Exercise 1
+# Data Platform Exercise
 
 ## Objectives
 - Design, develop a robust billing system that automates the recording of transaction fees and processes payments.
